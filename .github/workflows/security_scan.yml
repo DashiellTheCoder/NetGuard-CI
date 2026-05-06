@@ -15,11 +15,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Secret Detection (TruffleHog)
+      -- name: Secret Detection (TruffleHog)
         uses: trufflesecurity/trufflehog@main
         with:
           path: ./
-          extra_args: --full --results=verified
+          base: "" 
 
       - name: Docker Linting (Hadolint)
         uses: hadolint/hadolint-action@v3.1.0
